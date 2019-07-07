@@ -10,12 +10,13 @@
 + 2.IDEA 导入 stockmvc 项目文件夹
 + 3.加载运行主类 stockmvc\src\main\java\com\hand\zhang\stockmvc\controller\FimvcApplication.java
 ## **包含功能**
-+ 股票信息下载，下载所有股票的前10年的价格信息
++ 股票信息下载，下载所有股票的前10年的价格信息
 + 每日下午3点30定时更新数据
-+ 股票列表显示
++ 股票列表显示
 + 单个股票的历史价格查询
 + 统计前30天涨幅超过5%的次数
-
+## **其它**
++ 如果网络环境较差，可下载sql文件手动导入数据。链接：https://pan.baidu.com/s/1-F8DmPpQDi5nQMonJuS5PA 提取码：7689
 ## **预览**
 + Home页
 ![blockchain](https://raw.githubusercontent.com/AndersIves/stockmvc/master/preview/1.png "区块链")
