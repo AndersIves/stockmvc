@@ -4,7 +4,7 @@
 + MySQL 8.0.16
 + IDEA
 + JDK 1.8
-+ Maven
++ Maven 3.6.1
 ## **启动**
 + 1.修改 stockmvc\configuration.ini 配置文件为本地服务器配置，三行分别为数据库连接地址、用户名、密码
 + 2.IDEA 导入 stockmvc 项目文件夹
