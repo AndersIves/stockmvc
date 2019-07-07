@@ -9,6 +9,7 @@
 + 1.修改 stockmvc\configuration.ini 配置文件为本地服务器配置，三行分别为数据库连接地址、用户名、密码
 + 2.IDEA 导入 stockmvc 项目文件夹
 + 3.加载运行主类 stockmvc\src\main\java\com\hand\zhang\stockmvc\controller\FimvcApplication.java
++ 4.浏览器输入: localhost:8080/ 进入主菜单
 ## **包含功能**
 + 股票信息下载，下载所有股票的前10年的价格信息
 + 每日下午3点30定时更新数据
