@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>股票信息查询系统-25675</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script >
+        $(document).ready(function(){
+            $("#history").click(function(){
+                $(location).attr('href', "/history");
+            });
+            $("#history30").click(function(){
+                $(location).attr('href', "/history30");
+            });
+            $("#admin").click(function(){
+                $(location).attr('href', "/admin");
+            });
+        });
+    </script>
+</head>
+</body>
+
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="row">
+                <div class="span12">
+                    <h1 class="text-center">
+                        股票信息查询系统
+                    </h1>
+                    <h3 class="text-center muted">
+                        <em><span>后端实践项目</span><span>-25675</span></em>
+                    </h3>
+                    <div class="row">
+                        <div class="span4">
+                        </div>
+                        <div class="span4">
+                            <button class="btn btn-large btn-inverse btn-block" type="button" id="history">历史价格查询</button>
+                            <button class="btn btn-large btn-inverse btn-block" type="button" id="history30">历史30天涨幅查询</button>
+                            <button class="btn btn-large btn-inverse btn-block" type="button" id="admin">服务器管理</button>
+                        </div>
+                        <div class="span4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

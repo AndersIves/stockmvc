@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title id="uptitle">历史查询</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script >
+        $(document).ready(function(){
+            var stockid = window.location.search.substr(1);
+            $.post("/getNameByID",{id:stockid},
+                function(data){
+                    $("#title").text(stockid+data+" 历史价格查询");
+                    $("#uptitle").text(stockid+data+" 历史价格查询");
+                });
+            $("#back").click(function(){
+                $(location).attr('href', "/history");
+            });
+            $.post("/getPricesMap",{id:stockid},
+                function(data){
+                    var c = 0;
+                    for(var s in data){
+                        c++;
+                        var date = "20"+s.substr(0,2)+"年"+s.substr(2,2)+"月"+s.substr(4,4)+"日"
+                        if(c%2==0)
+                            $("table").append("<tr class=\"info\"><td></td><td>"+date+"</td><td>"+data[s]+"</td></tr>");
+                        else
+                            $("table").append("<tr><td></td><td>"+date+"</td><td>"+data[s]+"</td></tr>");
+
+                    }
+                });
+
+            $("#pp").text("按下 ctrl+f 开启搜索");
+        });
+    </script>
+</head>
+</body>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="row-fluid">
+                <div class="span12">
+                    <button class="btn btn-large btn-block btn-inverse" type="button" id="back">返回上一层</button>
+                    <h1 class="text-center" id="title">
+                        历史价格查询
+                    </h1>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>
+
+                                    </th>
+                                    <th>
+                                        时间
+                                    </th>
+                                    <th>
+                                        收盘价
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                                <p id = "pp">
+                                    正在加载...
+                                </p>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>历史查询</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script >
+        $(document).ready(function(){
+            $("#back").click(function(){
+                $(location).attr('href', "/");
+            });
+            $.get("/getStocksMap",function (data) {
+                var c = 0;
+                for(var s in data){
+                    c++;
+                    if(c%2==0)
+                        $("table").append("<tr class=\"info\"><td></td><td>"+s+"</td><td>"+data[s]+"</td><td><button class=\"mybtn\" type=\"button\" id=\""+s+"\">查询</button></td></tr>");
+                    else
+                        $("table").append("<tr><td></td><td>"+s+"</td><td>"+data[s]+"</td><td><button class=\"mybtn\" type=\"button\" id=\""+s+"\">查询</button></td></tr>");
+
+                }
+                $(".mybtn").click(function () {
+                    $(location).attr('href', "/historyINF?"+$(this).attr("id"));
+                })
+                $("#pp").text("按下 ctrl+f 开启搜索");
+
+            })
+        });
+    </script>
+</head>
+</body>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="row-fluid">
+                <div class="span12">
+                    <button class="btn btn-large btn-block btn-inverse" type="button" id="back">返回主菜单</button>
+                    <h1 class="text-center">
+                        历史价格查询
+                    </h1>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>
+
+                                    </th>
+                                    <th>
+                                        股票号
+                                    </th>
+                                    <th>
+                                        股票名称
+                                    </th>
+                                    <th>
+
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                                <p id = "pp">
+                                    正在加载...
+                                </p>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
