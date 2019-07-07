@@ -17,15 +17,17 @@
 + 单个股票的历史价格查询
 + 统计前30天涨幅超过5%的次数
 ## **其它**
-+ 如果网络环境较差，可下载sql文件手动导入数据。链接：https://pan.baidu.com/s/1-F8DmPpQDi5nQMonJuS5PA 提取码：7689
++ 如果网络环境较差，可下载sql文件手动导入数据
++ 链接：https://pan.baidu.com/s/1-F8DmPpQDi5nQMonJuS5PA 
++ 提取码：7689
 ## **预览**
 + Home页
-![blockchain](https://raw.githubusercontent.com/AndersIves/stockmvc/master/preview/1.png "区块链")
+![blockchain](https://raw.githubusercontent.com/AndersIves/stockmvc/master/preview/1.png "Home页")
 + 历史价格查询1
-![blockchain](https://raw.githubusercontent.com/AndersIves/stockmvc/master/preview/2.png "区块链")
+![blockchain](https://raw.githubusercontent.com/AndersIves/stockmvc/master/preview/2.png "历史价格查询1")
 + 历史价格查询2
-![blockchain](https://raw.githubusercontent.com/AndersIves/stockmvc/master/preview/3.png "区块链")
-+ 前20天涨幅超5%查询
-![blockchain](https://raw.githubusercontent.com/AndersIves/stockmvc/master/preview/4.png "区块链")
+![blockchain](https://raw.githubusercontent.com/AndersIves/stockmvc/master/preview/3.png "历史价格查询2")
++ 前30天涨幅超5%查询
+![blockchain](https://raw.githubusercontent.com/AndersIves/stockmvc/master/preview/4.png "前30天涨幅超5%查询")
 + 管理员页面
-![blockchain](https://raw.githubusercontent.com/AndersIves/stockmvc/master/preview/5.png "区块链")
+![blockchain](https://raw.githubusercontent.com/AndersIves/stockmvc/master/preview/5.png "管理员页面")
