@@ -18,8 +18,7 @@
 + 统计前30天涨幅超过5%的次数
 ## **其它**
 + 如果网络环境较差，可下载sql文件手动导入数据
-+ 链接：https://pan.baidu.com/s/1-F8DmPpQDi5nQMonJuS5PA 
-+ 提取码：7689
++ 链接：[提取码：7689](https://pan.baidu.com/s/1-F8DmPpQDi5nQMonJuS5PA)
 ## **预览**
 + Home页
 ![blockchain](https://raw.githubusercontent.com/AndersIves/stockmvc/master/preview/1.png "Home页")
