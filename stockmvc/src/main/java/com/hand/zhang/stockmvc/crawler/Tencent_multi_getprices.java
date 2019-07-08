@@ -13,6 +13,13 @@ public class Tencent_multi_getprices extends Thread{
     }
 
     public Tencent_multi_getprices(int workers){
+        Tencent_getList t = new Tencent_getList();
+        t.start();
+        try {
+            t.join();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         this.workers = workers;
     }
 
