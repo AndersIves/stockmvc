@@ -6,8 +6,8 @@
 + JDK 1.8
 + Maven 3.6.1
 ## **启动**
-+ 1. 修改 stockmvc\configuration.ini 配置文件为本地服务器配置，三行依次为数据库连接地址、用户名、密码
-+ 2. IDEA 导入 stockmvc 项目文件夹
++ 1. IDEA 导入 stockmvc 项目文件夹
++ 2. 修改 stockmvc\configuration.ini 配置文件为本地服务器配置，三行依次为数据库连接地址、用户名、密码
 + 3. 加载运行主类 stockmvc\src\main\java\com\hand\zhang\stockmvc\controller\FimvcApplication.java
 + 4. 浏览器输入: localhost:8080/ 进入主菜单
 ## **包含功能**
